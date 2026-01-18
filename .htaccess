@@ -1,0 +1,11 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /mental-health-system/
+
+    # Redirect all requests to public folder
+    RewriteCond %{REQUEST_URI} !^/mental-health-system/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
